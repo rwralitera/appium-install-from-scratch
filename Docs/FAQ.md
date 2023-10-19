@@ -20,8 +20,13 @@ export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
 ```
 
+### Solution 3
+```bash
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+```
+
 ## error chrome
- Si vous avez une erreur xcode lors du lancement de vos tests sur un device browser:
+ Si vous avez une erreur xcode lors du lancement de vos tests sur un browser du device:
 ```bash
 {com.android.chrome/com.google.android.apps.chrome.Main} does not exist.
 ```
