@@ -21,7 +21,10 @@ Je vais vous lister les prérequis nécessaires pour un projet Appium.
 ## Appium install
 
 ### Install appium-doctor
-- [Appium Doctor](https://github.com/appium/appium-doctor) est un outil indispensable pour diagnostiquer et corriger les problèmes courants de configuration de Node, iOS et Android avant de démarrer avec Appium. Vous pouvez installer Appium Doctor en exécutant la commande suivante : `npm install appium-doctor -g`.
+- [Appium Doctor](https://github.com/appium/appium-doctor) est un outil indispensable pour diagnostiquer et corriger les problèmes courants de configuration de Node, iOS et Android avant de démarrer avec Appium. Vous pouvez installer Appium Doctor en exécutant la commande suivante : 
+```bash
+npm install appium-doctor -g
+```
 
 Vous l'exécutez pour vérifier les configurations de votre machine locale. Voir un exemple de sortie ci-dessous:
 
@@ -61,9 +64,19 @@ export emulator=/Users/rijawilliamralitera/Library/Android/sdk/emulator
 ```
 
 ### Install appium et ses drivers
-- [Appium](https://github.com/appium/appium) est le framework d'automatisation mobile lui-même. Vous pouvez l'installer en exécutant la commande suivante : `npm install appium -g`. Assurez-vous également d'installer les drivers nécessaires pour Android et iOS en utilisant les commandes fournies:
-- Pour le driver Android => `appium driver install uiautomator2`
-- Pour le driver iOS => `appium driver install xcuitest`
+- [Appium](https://github.com/appium/appium) est le framework d'automatisation mobile lui-même. Vous pouvez l'installer en exécutant la commande suivante : 
+```bash
+npm install appium -g
+```
+- Assurez-vous également d'installer les drivers nécessaires pour Android et iOS en utilisant les commandes fournies:
+- Pour le driver **Android**
+```bash
+appium driver install uiautomator2
+```
+- Pour le driver **iOS**
+```bash
+appium driver install xcuitest
+```
 
 Si l'installation de npm a réussi, vous devriez pouvoir lancer la commande `appium -v` et voir une version comme ci-dessous.
 

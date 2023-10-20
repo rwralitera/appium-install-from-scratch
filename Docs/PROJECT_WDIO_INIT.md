@@ -46,7 +46,7 @@ Voici les choix à faire pour simplifier l'initialisation:
 npx wdio config
 ```
 
-## Modifier les capabilities
+## Modifier les capabilities pour android
 
 Dans le fichier `wdio.conf.ts`, modifiez (deviceName et platformVersion) en fonction de votre emulateur:
 
@@ -60,9 +60,9 @@ capabilities: [{
         'appium:automationName': 'UiAutomator2'
     }],
 ```
-## Lancer le premier test
-Assurez vous que votre emulateur est bien démarré.
-Puis lancer le test:
+## Lancer le premier test sur Android
+- Assurez vous que votre emulateur est bien démarré.
+- Puis lancer le test:
 ```bash
 npx wdio run ./wdio.conf.ts
 ```

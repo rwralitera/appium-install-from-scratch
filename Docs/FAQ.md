@@ -30,5 +30,6 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 ```bash
 {com.android.chrome/com.google.android.apps.chrome.Main} does not exist.
 ```
+
 ### Solution
-- il faut changer de version Android de votre emulateur en version 12 à cause d'un bug sur Android 13 [ici](https://github.com/appium/appium/issues/17492)
+- Il faut changer de version Android de votre emulateur en version 12 à cause d'un bug sur Android 13 [ici](https://github.com/appium/appium/issues/17492)

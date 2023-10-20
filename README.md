@@ -1,7 +1,7 @@
 # Appium training from scratch
 Ce repository consiste à donner les premières instructions pour apprendre à démarrer un premier projet d'automatisation de tests mobile sous Appium.
 
-## Installation des prérequis
+## [Installation des prérequis](./Docs/PREREQUIS.md)
 - Vous allez voir [ici](./Docs/PREREQUIS.md) le document pour les prérequis à installer
 
 ## Configuration des devices Android et iOS
