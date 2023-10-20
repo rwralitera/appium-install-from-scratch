@@ -1,4 +1,4 @@
-# Appium training from scratch
+# Appium install from scratch
 Ce repository consiste à donner les premières instructions pour apprendre à démarrer un premier projet d'automatisation de tests mobile sous Appium.
 
 ## [Installation des prérequis](./Docs/PREREQUIS.md)
@@ -17,8 +17,8 @@ Vous avez deux possibilités:
 ### Lancer les tests Android de ce repos:
 - Clonez le projet
 ```bash
-git clone https://github.com/rwralitera/appiumTrainingFromScratch.git
-cd appiumTrainingFromScratch
+git clone https://github.com/rwralitera/appium-install-from-scratch.git
+cd appium-install-from-scratch
 npm install
 ```
 - Lancez votre emulateur Android avec **Android Studio**
@@ -31,8 +31,8 @@ npx wdio run ./wdio.conf.ts
 ### Lancer les tests iOS de ce repos:
 - Clonez le projet
 ```bash
-git clone https://github.com/rwralitera/appiumTrainingFromScratch.git
-cd appiumTrainingFromScratch
+git clone https://github.com/rwralitera/appium-install-from-scratch.git
+cd appium-install-from-scratch
 npm install
 ```
 - Lancez votre emulateur iOS avec **XCODE SImulator**

@@ -22,11 +22,11 @@ Voici les choix à faire pour simplifier l'initialisation:
 ❯ TypeScript (https://www.typescriptlang.org/)
 ? Do you want WebdriverIO to autogenerate some test files? (Y/n) 
 ❯ Yes
-? What should be the location of your spec files? (/Users/rijawilliamralitera/git/appiumTrainingFromScratch/test/specs/**/*.ts)
+? What should be the location of your spec files? (/Users/rijawilliamralitera/git/appium-install-from-scratch/test/specs/**/*.ts)
 ❯ Laissez par default
 ? Do you want to use page objects (https://martinfowler.com/bliki/PageObject.html)? (Y/n)
 ❯ Yes
-? Where are your page objects located? (/Users/rijawilliamralitera/git/appiumTrainingFromScratch/test/pageobjects/**/*.ts)
+? Where are your page objects located? (/Users/rijawilliamralitera/git/appium-install-from-scratch/test/pageobjects/**/*.ts)
 ❯ Laissez par default
 ? Which reporter do you want to use? (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
 ❯◉ spec
