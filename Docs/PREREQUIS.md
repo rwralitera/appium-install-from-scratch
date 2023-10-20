@@ -18,9 +18,6 @@ Je vais vous lister les prérequis nécessaires pour un projet Appium.
 ### Install Node.js & NPM
 - Node.js est une plateforme JavaScript essentielle pour exécuter Appium. Vous pouvez télécharger la dernière version de Node.js sur [ce lien](https://nodejs.org/fr/download).
 
-### Applications de test
-- Pour effectuer des tests, vous aurez besoin des fichiers APK (pour Android) et .app.zip (pour iOS) des applications de test. Vous pouvez les télécharger depuis [ce dépôt](https://github.com/webdriverio/native-demo-app/releases).
-
 ## Appium install
 
 ### Install appium-doctor
@@ -105,4 +102,5 @@ Voir le [readme](https://github.com/appium/appium-desktop) pour savoir comment u
 Il fonctionne avec un serveur Appium. Lorsque vous l'utilisez pour inspecter une application mobile :
 - Il faut démarrer le serveur appium soit en **ligne de commande** ci-dessus, soit en passant par **appium-desktop**
 - Il faut démarrer un device Android ou iOS (réel ou emulé)
-- Il faut une ![configuration minimum](./assets/appiumInspector.png) pour pouvoir se connecter et inspécter le device
+- Il faut une configuration minimum pour pouvoir se connecter et inspécter le device
+![configuration](./assets/appiumInspector.png)
