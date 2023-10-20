@@ -1,41 +1,50 @@
-# Configurer Android et iOS sur une machine locale
+
+# Configuration d'Android et iOS sur une machine locale
 
 ## Android
-- Suivez les instructions pour configurer vos émulateurs [ici](https://developer.android.com/studio/run/managing-avds?hl=fr).
-- Il est possible de lancer les emulateur en ligne de commande [ici](https://developer.android.com/studio/run/emulator-commandline)
-- Ou utiliser ce module `start-android-emulator` [ici](https://github.com/wswebcreation/start-android-emulator)
+- Pour configurer vos émulateurs Android, suivez les instructions disponibles [ici](https://developer.android.com/studio/run/managing-avds?hl=fr).
+- Vous avez la possibilité de démarrer les émulateurs en ligne de commande en suivant les indications disponibles [ici](https://developer.android.com/studio/run/emulator-commandline).
+
+Une autre option que je recommande est d'utiliser le module `start-android-emulator`, que vous pouvez obtenir en suivant ce lien [ici](https://github.com/wswebcreation/start-android-emulator). Installez-le avec la commande suivante :
+
 ```bash
-npm install -g start-android-emulator
+sudo npm install -g start-android-emulator
 start-android-emulator
 ```
 
 ## iOS
-Assurez-vous d'avoir un Macbook, si vous n'en avez pas, achetez-en un, sinon cela ne fonctionnera pas (il n'y a pas de moyen légal d'utiliser iOS sur Windows/Linux).
+Assurez-vous de disposer d'un Macbook, car iOS ne peut être utilisé légalement que sur un matériel Apple. Si vous ne possédez pas de Macbook, il ne sera pas possible d'utiliser iOS, car il n'existe pas de moyen légal de le faire fonctionner sur des systèmes Windows ou Linux.
 
-Après l'installation de xCode, vous obtiendrez la dernière version d'iOS supportée déjà installée.
+Après avoir installé **Xcode**, vous aurez automatiquement la dernière version d'iOS prise en charge installée sur votre système.
 
-Vous pouvez utiliser les options suivantes pour démarrer manuellement un simulateur :
+Vous pouvez choisir parmi les options suivantes pour démarrer manuellement un simulateur iOS :
 
-- Via l'application Simulator, trouvez-la sur Mac et ajoutez-la à votre dock comme suit
+- Utilisez l'application "Simulator" que vous pouvez trouver sur votre Mac et ajoutez-la à votre dock. Voici comment faire :
 
-    ![Simulator App](./assets/simualtor-app.jpg)
+    ![Application Simulator](./assets/simualtor-app.jpg)
 
-    ![Simulator start](./assets/start-simulator.jpg)
+    ![Démarrage du simulateur](./assets/start-simulator.jpg)
 
-- Utilisez un module appelé `start-ios-simulator` qui peut être trouvé [ici] (https://github.com/wswebcreation/start-ios-simulator). Avec ce module, vous pouvez facilement utiliser votre terminal pour sélectionner votre simulateur
+Pareil que pour Android, vous pouvez utiliser un module appelé `start-ios-simulator`, disponible [ici](https://github.com/wswebcreation/start-ios-simulator). Avec ce module, vous pouvez facilement sélectionner un simulateur à partir de votre terminal en utilisant la commande suivante :
+
 ```bash
-npm install -g start-ios-simulator
+sudo npm install -g start-ios-simulator
 start-ios-simulator
 ```
 
 ## Astuce
-> Il est conseillé de garder les emulateurs en permanence et de démarrer les tests sur un émulateur déjà ouvert pour accélérer les tests.
-Dans un terminal dédié:
+> :sunglasses: Il est recommandé de laisser les émulateurs ouverts en permanence et de démarrer les tests sur un émulateur déjà ouvert pour accélérer le processus de test.
+
+Dans un terminal dédié :
+
 ```bash
 start-ios-simulator
 ```
 
-Dans un autre terminal dédié:
+Dans un autre terminal dédié :
+
 ```bash
 start-android-simulator
 ```
+
+Cela vous permettra de gagner du temps et d'optimiser vos tests.

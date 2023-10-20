@@ -1,49 +1,63 @@
-# Appium install from scratch
-Ce repository consiste à donner les premières instructions pour apprendre à démarrer un premier projet d'automatisation de tests mobile sous Appium.
 
-## [Installation des prérequis](./Docs/PREREQUIS.md)
-- Vous allez voir [ici](./Docs/PREREQUIS.md) le document pour les prérequis à installer
+# Installation d'Appium depuis le début
 
-## Configuration des devices Android et iOS
-- Vous allez voir [ici](./Docs/ANDROID_IOS_SETUP.md) le document pour la configuration Android et iOS
+Ce référentiel vise à vous fournir les instructions initiales pour démarrer votre premier projet d'automatisation de tests mobile avec Appium.
 
-## Démarrage de appium avec webdriverio
-Vous avez deux possibilités:
+## Installation des prérequis
 
-### Démarrer un nouveau projet à partir de zéro
-- Créer votre propre projet github
-- Suivre les instructions de ce document [ici](./Docs/PROJECT_WDIO_INIT.md) pour démarre un nouveau projet à partir de zéro.
+Commencez par installer les prérequis nécessaires en suivant les instructions du fichier [PREREQUIS.md](./Docs/PREREQUIS.md).
 
-### Lancer les tests Android de ce repos:
-- Clonez le projet
+## Configuration des appareils Android et iOS
+
+Ensuite, configurez vos appareils Android et iOS en suivant les directives présentées dans le fichier [ANDROID_IOS_SETUP.md](./Docs/ANDROID_IOS_SETUP.md).
+
+## Démarrage d'Appium avec WebdriverIO
+
+Pour commencer votre apprentissage, vous avez deux options :
+
+### Suivre les instructions à partir de zéro
+
+1. Créez votre propre projet GitHub.
+2. Suivez les instructions détaillées du document [PROJECT_WDIO_INIT.md](./Docs/PROJECT_WDIO_INIT.md) pour créer un nouveau projet à partir de zéro.
+
+### Cloner / forker ce dépôt
+
+1. Clonez ou forkez le projet selon vos préférences en utilisant la commande suivante :
+
 ```bash
 git clone https://github.com/rwralitera/appium-install-from-scratch.git
 cd appium-install-from-scratch
 npm install
 ```
-- Lancez votre emulateur Android avec **Android Studio**
-- Modifier les capabilities dans le fichier **wdio.conf.ts** pour correspondre à votre emulateur android
-- Lancez le test sur Android:
+
+2. Démarrez votre émulateur Android à l'aide d'**Android Studio**.
+3. Modifiez le fichier **wdio.conf.ts** pour qu'il corresponde à votre émulateur Android.
+4. Exécutez le test sur Android en utilisant la commande :
+
 ```bash
 npx wdio run ./wdio.conf.ts
 ```
 
-### Lancer les tests iOS de ce repos:
-- Clonez le projet
+### Lancer les tests iOS de ce dépôt
+
+1. Clonez le projet de la manière suivante :
+
 ```bash
 git clone https://github.com/rwralitera/appium-install-from-scratch.git
 cd appium-install-from-scratch
 npm install
 ```
-- Lancez votre emulateur iOS avec **XCODE SImulator**
-- Modifier les capabilities dans le fichier **wdio.ios.conf.ts** pour correspondre à votre emulateur iOS
-- Lancez le test sur iOS:
+
+2. Démarrez votre émulateur iOS avec **Xcode Simulator**.
+3. Modifiez le fichier **wdio.ios.conf.ts** pour qu'il corresponde à votre émulateur iOS.
+4. Exécutez le test sur iOS en utilisant la commande :
+
 ```bash
 npx wdio run ./wdio.ios.conf.ts
 ```
 
-> :warning: **pas besoin de lancer le serveur appium pour lancer les tests**. Webdriverio lance automatiquement appium dans la ligne de commande. C'est à dire que le serveur **appium** doit être lancer uniquement pour pouvoir utiliser ***appium-inspector**
+> :warning: **Vous n'avez pas besoin de démarrer le serveur Appium manuellement pour exécuter les tests**. WebdriverIO lance automatiquement Appium en ligne de commande. Le serveur **Appium** doit uniquement être démarré si vous souhaitez utiliser **Appium Inspector**.
 
-## Les FAQ
-- Vous allez voir [ici](./Docs/FAQ.md) le document pour les erreurs que vous pourriez constater lors de l'installation et ainsi les corriger rapidement.
+## Foire aux questions (FAQ)
 
+Consultez le fichier [FAQ.md](./Docs/FAQ.md) pour obtenir des solutions aux erreurs courantes que vous pourriez rencontrer lors de l'installation. Si vous rencontrez d'autres problèmes, n'hésitez pas à nous les signaler, nous mettrons à jour ce document en conséquence.

@@ -1,58 +1,62 @@
-# Project
 
-## Init
+# Projet WebdriverIO
+
+## Initialisation
+
+Pour initialiser un projet webdriverIO, utilisez la commande suivante :
 
 ```bash
 npm init wdio .
 ```
 
-Voici les choix à faire pour simplifier l'initialisation:
+Voici les choix de réponses à effectuer pour simplifier l'initialisation :
+
 ```bash
-? What type of testing would you like to do? 
-❯ E2E Testing - of Web or Mobile Applications
-? Where is your automation backend located? (Use arrow keys)
-❯ On my local machine 
-? Which environment you would like to automate?
-❯ Mobile - native, hybrid and mobile web apps, on Android or iOS 
-❯ Android - native, hybrid and mobile web apps, tested on emulators and real devices
-    > using UiAutomator2 (https://www.npmjs.com/package/appium-uiautomator2-driver)
-? Which framework do you want to use? (Use arrow keys)
+? Quel type de test souhaitez-vous effectuer ? 
+❯ Tests E2E - d'applications Web ou mobiles
+? Où se trouve votre backend d'automatisation ? (Utilisez les touches fléchées)
+❯ Sur ma machine locale 
+? Quel environnement souhaitez-vous automatiser ?
+❯ Mobile - applications natives, hybrides et Web mobiles, sur Android ou iOS 
+❯ Android - applications natives, hybrides et Web mobiles, testées sur des émulateurs et de vrais appareils
+    > en utilisant UiAutomator2 (https://www.npmjs.com/package/appium-uiautomator2-driver)
+? Quel framework souhaitez-vous utiliser ? (Utilisez les touches fléchées)
 ❯ Mocha (https://mochajs.org/) 
-? Do you want to use a compiler?
+? Souhaitez-vous utiliser un compilateur ?
 ❯ TypeScript (https://www.typescriptlang.org/)
-? Do you want WebdriverIO to autogenerate some test files? (Y/n) 
-❯ Yes
-? What should be the location of your spec files? (/Users/rijawilliamralitera/git/appium-install-from-scratch/test/specs/**/*.ts)
-❯ Laissez par default
-? Do you want to use page objects (https://martinfowler.com/bliki/PageObject.html)? (Y/n)
-❯ Yes
-? Where are your page objects located? (/Users/rijawilliamralitera/git/appium-install-from-scratch/test/pageobjects/**/*.ts)
-❯ Laissez par default
-? Which reporter do you want to use? (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+? Souhaitez-vous que WebdriverIO génère automatiquement certains fichiers de test ? (O/n) 
+❯ Oui
+? Quel devrait être l'emplacement de vos fichiers de spécification ? (/Users/rijawilliamralitera/git/appium-install-from-scratch/test/specs/**/*.ts)
+❯ Laissez par défaut
+? Souhaitez-vous utiliser des objets de page (https://martinfowler.com/bliki/PageObject.html) ? (O/n)
+❯ Oui
+? Où sont situés vos objets de page ? (/Users/rijawilliamralitera/git/appium-install-from-scratch/test/pageobjects/**/*.ts)
+❯ Laissez par défaut
+? Quel rapporteur souhaitez-vous utiliser ? (Appuyez sur <espace> pour sélectionner, <a> pour tout basculer, <i> pour inverser la sélection, et <entrée> pour continuer)
 ❯◉ spec
-? Do you want to add a plugin to your test setup? (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
-❯ Laissez par default sans selection
-? Do you want to add a service to your test setup? (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+? Souhaitez-vous ajouter un plugin à votre configuration de test ? (Appuyez sur <espace> pour sélectionner, <a> pour tout basculer, <i> pour inverser la sélection, et <entrée> pour continuer)
+❯ Laissez par défaut sans sélection
+? Souhaitez-vous ajouter un service à votre configuration de test ? (Appuyez sur <espace> pour sélectionner, <a> pour tout basculer, <i> pour inverser la sélection, et <entrée> pour continuer)
  ◉ appium
-? Do you want me to run `npm install` (Y/n)
- ❯ Yes
-? Continue with Appium setup using appium-installer (https://github.com/AppiumTestDistribution/appium-installer)? (Y/n)
-❯ No
+? Souhaitez-vous que j'exécute `npm install` ? (O/n)
+ ❯ Oui
+? Continuer avec la configuration d'Appium en utilisant appium-installer (https://github.com/AppiumTestDistribution/appium-installer) ? (O/n)
+❯ Non
 ```
 
-### Si vous avez déjà un projet existant mais que vous voulez juste le Wizard de configuration
+> :warning: Si vous avez déjà un projet existant mais que vous souhaitez simplement utiliser le configurateur Wizard. Utilisez la commande suivante :
 
 ```bash
 npx wdio config
 ```
 
-## Modifier les capabilities pour android
+## Modification des capabilities pour Android
 
-Dans le fichier `wdio.conf.ts`, modifiez (deviceName et platformVersion) en fonction de votre emulateur:
+Dans le fichier `wdio.conf.ts`, modifiez les valeurs (deviceName et platformVersion) en fonction de votre émulateur :
 
 ```bash
 capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
+        // Capacités pour les tests Web Appium locaux sur un émulateur Android
         platformName: 'Android',
         browserName: 'Chrome',
         'appium:deviceName': 'Android GoogleAPI Emulator',
@@ -60,10 +64,41 @@ capabilities: [{
         'appium:automationName': 'UiAutomator2'
     }],
 ```
-## Lancer le premier test sur Android
-- Assurez vous que votre emulateur est bien démarré.
-- Puis lancer le test:
+
+## Lancement du premier test sur Android
+
+- Assurez-vous que votre émulateur est correctement démarré.
+- Ensuite, lancez le test en utilisant la commande suivante :
+
 ```bash
 npx wdio run ./wdio.conf.ts
 ```
 
+Cela vous permettra de lancer votre premier test sur Android.
+
+## Modification des capabilities pour iOS
+
+Dans le fichier `wdio.ios.conf.ts`, modifiez les valeurs (deviceName et platformVersion) en fonction de votre émulateur :
+
+```bash
+capabilities: [{
+        // Capacités pour les tests Web Appium locaux sur un émulateur Android
+        platformName: 'iOS',
+        browserName: 'safari',
+        'appium:deviceName': 'iPhone 15',
+        'appium:platformVersion': '17.0',
+        'appium:automationName': 'XCUITest',
+        'appium:newCommandTimeout':  240,
+    }],
+```
+
+## Lancement du premier test sur iOS
+
+- Assurez-vous que votre émulateur est correctement démarré.
+- Ensuite, lancez le test en utilisant la commande suivante :
+
+```bash
+npx wdio run ./wdio.ios.conf.ts
+```
+
+Cela vous permettra de lancer votre premier test sur iOS.

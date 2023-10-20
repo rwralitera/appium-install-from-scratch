@@ -1,59 +1,61 @@
+
 # appiumProject
 
 ## Prérequis
-Je vais vous lister les prérequis nécessaires pour un projet Appium.
+Pour mener à bien un projet Appium, vous devez vous assurer d'avoir tous les éléments prérequis suivants en place :
 
-### Install Java JDK
-- Pour commencer, vous devez installer Java JDK, qui est essentiel pour développer des tests avec Appium. Vous pouvez télécharger la dernière version sur [ce lien](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+### Installation de Java JDK
+- Tout d'abord, l'installation de Java JDK est essentielle pour développer des tests avec Appium. Vous pouvez télécharger la dernière version à partir de [ce lien](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
-### Install Android Studio
+### Installation d'Android Studio
 - Android Studio est l'environnement de développement recommandé pour créer des applications Android et travailler avec Appium. Vous pouvez télécharger Android Studio à partir de [ce lien](https://developer.android.com/studio/index.html).
 
-### Install Visual Studio Code
-- Visual Studio Code est un éditeur de code léger et puissant qui est couramment utilisé pour écrire des scripts de tests Appium. Vous pouvez le télécharger [ici](https://code.visualstudio.com/).
+### Installation de Visual Studio Code
+- Visual Studio Code est un éditeur de code léger et puissant couramment utilisé pour écrire des scripts de tests Appium. Vous pouvez le télécharger [ici](https://code.visualstudio.com/).
 
-### Install Xcode
+### Installation de Xcode
 - Si vous prévoyez de développer pour des appareils iOS, vous devrez installer Xcode, l'IDE officiel d'Apple. Vous pouvez obtenir Xcode en suivant [ce lien](https://developer.apple.com/xcode/).
 
-### Install Node.js & NPM
-- Node.js est une plateforme JavaScript essentielle pour exécuter Appium. Vous pouvez télécharger la dernière version de Node.js sur [ce lien](https://nodejs.org/fr/download).
+### Installation de Node.js & NPM
+- Node.js est une plateforme JavaScript essentielle pour exécuter Appium. Vous pouvez télécharger la dernière version de Node.js à partir de [ce lien](https://nodejs.org/fr/download).
 
-## Appium install
+## Installation d'Appium
 
-### Install appium-doctor
-- [Appium Doctor](https://github.com/appium/appium-doctor) est un outil indispensable pour diagnostiquer et corriger les problèmes courants de configuration de Node, iOS et Android avant de démarrer avec Appium. Vous pouvez installer Appium Doctor en exécutant la commande suivante : 
+### Installation d'appium-doctor
+- [Appium Doctor](https://github.com/appium/appium-doctor) est un outil essentiel pour diagnostiquer et corriger les problèmes courants de configuration de Node, iOS et Android avant de commencer avec Appium. Vous pouvez installer Appium Doctor en exécutant la commande suivante : 
+
 ```bash
-npm install appium-doctor -g
+sudo npm install appium-doctor -g
 ```
 
-Vous l'exécutez pour vérifier les configurations de votre machine locale. Voir un exemple de sortie ci-dessous:
+Vous pouvez l'exécuter pour vérifier les configurations de votre machine locale. Voici un exemple de sortie :
 
 ```bash
 appium-doctor
 
 info AppiumDoctor Appium Doctor v.1.4.3
 info AppiumDoctor ### Diagnostic starting ###
-info AppiumDoctor  ✔ The Node.js binary was found at: /Users/rijawilliamralitera/.nvm/versions/node/v8.9.1/bin/node
-info AppiumDoctor  ✔ Node version is 8.9.1
-info AppiumDoctor  ✔ Xcode is installed at: /Applications/Xcode.app/Contents/Developer
-info AppiumDoctor  ✔ Xcode Command Line Tools are installed.
-info AppiumDoctor  ✔ DevToolsSecurity is enabled.
-info AppiumDoctor  ✔ The Authorization DB is set up properly.
-info AppiumDoctor  ✔ Carthage was found at: /usr/local/bin/carthage
-info AppiumDoctor  ✔ HOME is set to: /Users/rijawilliamralitera
-info AppiumDoctor  ✔ ANDROID_HOME is set to: /Users/rijawilliamralitera/Library/Android/sdk
-info AppiumDoctor  ✔ JAVA_HOME is set to: /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
-info AppiumDoctor  ✔ adb exists at: /Users/rijawilliamralitera/Library/Android/sdk/platform-tools/adb
-info AppiumDoctor  ✔ android exists at: /Users/rijawilliamralitera/Library/Android/sdk/tools/android
-info AppiumDoctor  ✔ emulator exists at: /Users/rijawilliamralitera/Library/Android/sdk/tools/emulator
-info AppiumDoctor  ✔ Bin directory of $JAVA_HOME is set
-info AppiumDoctor ### Diagnostic completed, no fix needed. ###
+info AppiumDoctor  ✔ Le binaire Node.js a été trouvé à : /Users/rijawilliamralitera/.nvm/versions/node/v8.9.1/bin/node
+info AppiumDoctor  ✔ La version de Node est 8.9.1
+info AppiumDoctor  ✔ Xcode est installé à : /Applications/Xcode.app/Contents/Developer
+info AppiumDoctor  ✔ Les Outils de ligne de commande Xcode sont installés.
+info AppiumDoctor  ✔ DevToolsSecurity est activé.
+info AppiumDoctor  ✔ La base de données d'autorisation est correctement configurée.
+info AppiumDoctor  ✔ Carthage a été trouvé à : /usr/local/bin/carthage
+info AppiumDoctor  ✔ HOME est configuré à : /Users/rijawilliamralitera
+info AppiumDoctor  ✔ ANDROID_HOME est configuré à : /Users/rijawilliamralitera/Library/Android/sdk
+info AppiumDoctor  ✔ JAVA_HOME est configuré à : /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
+info AppiumDoctor  ✔ adb existe à : /Users/rijawilliamralitera/Library/Android/sdk/platform-tools/adb
+info AppiumDoctor  ✔ android existe à : /Users/rijawilliamralitera/Library/Android/sdk/tools/android
+info AppiumDoctor  ✔ émulateur existe à : /Users/rijawilliamralitera/Library/Android/sdk/tools/emulator
+info AppiumDoctor  ✔ Le répertoire bin de $JAVA_HOME est configuré
+info AppiumDoctor ### Diagnostic terminé, aucune correction n'est nécessaire. ###
 info AppiumDoctor
-info AppiumDoctor Everything looks good, bye!
+info AppiumDoctor Tout semble bon, au revoir !
 info AppiumDoctor
 ```
 
-Si appium-doctor le peut, il fixera les problèmes pour vous, sinon, réglez-les manuellement. Si vous avez des problèmes avec ENV, assurez-vous que vous les avez configurés comme ceci:
+Si appium-doctor le permet, il corrigera les problèmes pour vous, sinon, vous devrez les résoudre manuellement. Si vous rencontrez des problèmes liés à l'environnement (ENV), assurez-vous qu'ils sont configurés comme suit :
 
 ```bash
 export ANDROID_HOME=/Users/rijawilliamralitera/Library/Android/sdk
@@ -63,57 +65,67 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME
 export emulator=/Users/rijawilliamralitera/Library/Android/sdk/emulator
 ```
 
-### Install appium et ses drivers
+### Installation d'Appium et de ses drivers
 - [Appium](https://github.com/appium/appium) est le framework d'automatisation mobile lui-même. Vous pouvez l'installer en exécutant la commande suivante : 
+
 ```bash
-npm install appium -g
+sudo npm install appium -g
 ```
-- Assurez-vous également d'installer les drivers nécessaires pour Android et iOS en utilisant les commandes fournies:
-- Pour le driver **Android**
+
+Assurez-vous également d'installer les pilotes nécessaires pour Android et iOS en utilisant les commandes suivantes :
+- Pour le driver **Android** :
+
 ```bash
 appium driver install uiautomator2
 ```
-- Pour le driver **iOS**
+
+- Pour le driver **iOS** :
+
 ```bash
 appium driver install xcuitest
 ```
 
-Si l'installation de npm a réussi, vous devriez pouvoir lancer la commande `appium -v` et voir une version comme ci-dessous.
+Si l'installation réussit, vous devriez pouvoir exécuter la commande `appium -v` et voir une version comme suit :
 
 ```bash
-➜  appium -v
-2.1.3
-➜
+appium -v
 ```
 
-> Il faut toujours vérifier sur le site d'Appium s'il y a une nouvelle version. Les nouvelles versions d'Appium sont généralement publiées lorsque Android/iOS sortent de nouvelles versions.
-Des corrections de bugs peuvent également être publiées. Il suffit de consulter le [changelog] (https://github.com/appium/appium/blob/master/CHANGELOG.md) pour avoir une vue d'ensemble claire.
+> :warning: Il est recommandé de vérifier régulièrement le site d'Appium pour de nouvelles versions, car celles-ci sont généralement publiées en réponse aux nouvelles versions d'Android/iOS ou pour corriger des bugs. Vous pouvez consulter le [changelog](https://github.com/appium/appium/blob/master/CHANGELOG.md) pour obtenir une vue d'ensemble des mises à jour.
 
-### Install appium-desktop
+### Installation d'Appium Desktop
+- [Appium Desktop](https://github.com/appium/appium-desktop/releases) est une application open source qui vous permet d'utiliser le serveur Appium avec une interface utilisateur conviviale. Vous devez installer la dernière version stable sur votre machine.
 
-- [Appium Desktop](https://github.com/appium/appium-desktop/releases) est une application open source qui vous permet d'utiliser le serveur Appium avec une interface utilisateur conviviale. Il faut installer la dernière version stable sur votre machine.
+Veuillez consulter le [readme](https://github.com/appium/appium-desktop) pour savoir comment utiliser Appium Desktop.
 
-Voir le [readme](https://github.com/appium/appium-desktop) pour savoir comment utiliser l'Appium Desktop.
+> :warning: **Appium Desktop n'est plus maintenu** et comporte des failles de sécurité connues. Il est recommandé de ne pas l'utiliser du tout. Si vous choisissez de l'utiliser en local, faites-le à vos propres risques. 
 
-> :warning: **Appium Desktop n'est plus maintenu** et présente des failles de sécurité connues. Il est conseillé de ne pas l'utiliser du tout. Utilisez-le en local si vous voulez mais c'est à vos risques et périls. La méthode recommander est de lancer appium en ligne de commande:
+La méthode **recommandée** consiste à lancer Appium en ligne de commande :
 
 ```bash
 ➜  appium --base-path=/wd/hub
-[Appium] Welcome to Appium v2.1.3
-[Appium] Non-default server args:
+[Appium] Bienvenue dans Appium v2.1.3
+[Appium] Arguments du serveur non par défaut :
 [Appium] {
 [Appium]   basePath: '/wd/hub'
-[Appium] }
-[Appium] Attempting to load driver uiautomator2...
+[Appium
+
+] }
+[Appium] Tentative de chargement du pilote uiautomator2...
 ```
 
-- Il ne faut pas oublier le paramètre de lancement **base-path=/wd/hub** car la configuration a changé depuis la [migration Appium 2.X](https://appium.io/docs/en/2.1/guides/migrating-1-to-2/)
+N'oubliez pas de spécifier le paramètre de lancement **--base-path=/wd/hub**, car la configuration a changé depuis la [migration vers Appium 2.X](https://appium.io/docs/en/2.1/guides/migrating-1-to-2/).
 
-### Install appium-inspector
-- [Appium Inspector](https://github.com/appium/appium-inspector/releases) est un outil d'interface graphique qui permet d'inspecter les éléments des applications mobiles. Il faut installer la dernière version stable sur votre machine.
+### Installation d'Appium Inspector
+- [Appium Inspector](https://github.com/appium/appium-inspector/releases) est un outil d'interface graphique qui permet d'inspecter les éléments des applications mobiles. Vous devez installer la dernière version stable sur votre machine.
 
 Il fonctionne avec un serveur Appium. Lorsque vous l'utilisez pour inspecter une application mobile :
-- Il faut démarrer le serveur appium soit en **ligne de commande** ci-dessus, soit en passant par **appium-desktop**
-- Il faut démarrer un device Android ou iOS (réel ou emulé)
-- Il faut une configuration minimum pour pouvoir se connecter et inspécter le device
+
+ 1. Assurez-vous que le serveur Appium est démarré, soit en utilisant la
+    **ligne de commande** comme indiqué précédemment, soit en passant par **Appium Desktop**.
+ 2. Démarrez Android ou iOS (réel ou émulé).
+ 3. Assurez-vous d'avoir une configuration minimale en place pour vous connecter et inspecter l'appareil.
+
 ![configuration](./assets/appiumInspector.png)
+
+Assurez-vous de consulter la documentation d'[Appium](https://appium.io/docs/en/2.1/) pour des informations supplémentaires sur les fonctionnalités et les procédures de test mobile.
