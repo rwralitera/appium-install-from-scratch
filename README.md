@@ -18,7 +18,7 @@ Pour commencer votre apprentissage, vous avez deux options :
 ### Suivre les instructions à partir de zéro
 
 1. Créez votre propre projet GitHub.
-2. Suivez les instructions détaillées du document [PROJECT_WDIO_INIT.md](./Docs/PROJECT_WDIO_INIT.md) pour créer un nouveau projet à partir de zéro.
+2. Suivez les instructions détaillées du document [WDIO_SETUP.md](./Docs/WDIO_SETUP.md) pour créer un nouveau projet à partir de zéro.
 
 ### Cloner / forker ce dépôt
 
