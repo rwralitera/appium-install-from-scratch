@@ -1,5 +1,5 @@
 {
-  "name": "my-new-project",
+  "name": "appium-training-from-scratch",
   "type": "module",
   "devDependencies": {
     "@wdio/appium-service": "^8.20.0",
@@ -13,5 +13,6 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts"
-  }
+  },
+  "author": "Rija William Ralitera (https://williamralitera.com/)"
 }

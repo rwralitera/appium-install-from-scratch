@@ -1,45 +1,32 @@
 # appiumProject
 
 ## Prérequis
+Je vais vous lister les prérequis nécessaires pour un projet Appium.
 
 ### Install Java JDK
-- Java JDK [ici](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- Pour commencer, vous devez installer Java JDK, qui est essentiel pour développer des tests avec Appium. Vous pouvez télécharger la dernière version sur [ce lien](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 ### Install Android Studio
-- Android Studio [ici](https://developer.android.com/studio/index.html)
+- Android Studio est l'environnement de développement recommandé pour créer des applications Android et travailler avec Appium. Vous pouvez télécharger Android Studio à partir de [ce lien](https://developer.android.com/studio/index.html).
 
 ### Install Visual Studio Code
-- Visual Studio Code [ici](https://code.visualstudio.com/)
+- Visual Studio Code est un éditeur de code léger et puissant qui est couramment utilisé pour écrire des scripts de tests Appium. Vous pouvez le télécharger [ici](https://code.visualstudio.com/).
 
 ### Install Xcode
-- Xcode [ici](https://developer.apple.com/xcode/)
+- Si vous prévoyez de développer pour des appareils iOS, vous devrez installer Xcode, l'IDE officiel d'Apple. Vous pouvez obtenir Xcode en suivant [ce lien](https://developer.apple.com/xcode/).
 
 ### Install Node.js & NPM
-- Node.js [ici](https://nodejs.org/fr/download)
+- Node.js est une plateforme JavaScript essentielle pour exécuter Appium. Vous pouvez télécharger la dernière version de Node.js sur [ce lien](https://nodejs.org/fr/download).
 
 ### Applications de test
-- Télécharger le fichier APK (android) et le fichier .app.zip pour iOS  [ici](https://github.com/webdriverio/native-demo-app/releases)
+- Pour effectuer des tests, vous aurez besoin des fichiers APK (pour Android) et .app.zip (pour iOS) des applications de test. Vous pouvez les télécharger depuis [ce dépôt](https://github.com/webdriverio/native-demo-app/releases).
 
 ## Appium install
 
 ### Install appium-doctor
-- [appium-doctor](https://github.com/appium/appium-doctor) => `npm install appium-doctor -g`
+- [Appium Doctor](https://github.com/appium/appium-doctor) est un outil indispensable pour diagnostiquer et corriger les problèmes courants de configuration de Node, iOS et Android avant de démarrer avec Appium. Vous pouvez installer Appium Doctor en exécutant la commande suivante : `npm install appium-doctor -g`.
 
-### Install appium et ses drivers
-- [Appium](https://github.com/appium/appium) => `npm install appium -g`
-- Pour le driver Android => `appium driver install uiautomator2`
-- Pour le driver iOS => `appium driver install xcuitest`
-
-### Install appium-desktop
-- [appium-desktop](https://github.com/appium/appium-desktop/releases)
-
-### Install appium-inspector
-- [appium-inspector](https://github.com/appium/appium-inspector/releases)
-
-## Setup environnement
-
-### appium-doctor
-appium-doctor est utilisé pour diagnostiquer et corriger les problèmes courants de configuration de Node, iOS et Android avant de démarrer Appium. Vous ne l'exécutez qu'une seule fois pour vérifier votre machine locale. Voir un exemple de sortie ci-dessous.
+Vous l'exécutez pour vérifier les configurations de votre machine locale. Voir un exemple de sortie ci-dessous:
 
 ```bash
 appium-doctor
@@ -75,7 +62,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME
 # Celui-ci est utilisé pour le script `start.android.emulator`.
 export emulator=/Users/rijawilliamralitera/Library/Android/sdk/emulator
 ```
-### appium
+
+### Install appium et ses drivers
+- [Appium](https://github.com/appium/appium) est le framework d'automatisation mobile lui-même. Vous pouvez l'installer en exécutant la commande suivante : `npm install appium -g`. Assurez-vous également d'installer les drivers nécessaires pour Android et iOS en utilisant les commandes fournies:
+- Pour le driver Android => `appium driver install uiautomator2`
+- Pour le driver iOS => `appium driver install xcuitest`
 
 Si l'installation de npm a réussi, vous devriez pouvoir lancer la commande `appium -v` et voir une version comme ci-dessous.
 
@@ -88,27 +79,30 @@ Si l'installation de npm a réussi, vous devriez pouvoir lancer la commande `app
 > Il faut toujours vérifier sur le site d'Appium s'il y a une nouvelle version. Les nouvelles versions d'Appium sont généralement publiées lorsque Android/iOS sortent de nouvelles versions.
 Des corrections de bugs peuvent également être publiées. Il suffit de consulter le [changelog] (https://github.com/appium/appium/blob/master/CHANGELOG.md) pour avoir une vue d'ensemble claire.
 
-### appium-desktop
-Appium Desktop est une application open source qui nous donne la possibilité d'utiliser le serveur d'automatisation Appium dans une interface utilisateur. Il s'agit d'une combinaison de quelques outils liés à Appium :
+### Install appium-desktop
 
-- Une interface graphique pour le serveur Appium. Vous pouvez définir des options, démarrer/arrêter le serveur, voir les logs, etc...
-- Un inspecteur (installé séparément) que vous pouvez utiliser pour regarder les éléments de votre application, obtenir des informations de base à leur sujet, et effectuer des interactions de base avec eux. Ceci est utile pour apprendre à connaître Appium ou pour apprendre à connaître votre application afin de pouvoir écrire des tests pour elle.
-
-Cet outil est principalement utilisé pour visualiser la hiérarchie de l'interface utilisateur et localiser les éléments afin de s'assurer que tous les éléments peuvent être trouvés.
+- [Appium Desktop](https://github.com/appium/appium-desktop/releases) est une application open source qui vous permet d'utiliser le serveur Appium avec une interface utilisateur conviviale. Il faut installer la dernière version stable sur votre machine.
 
 Voir le [readme](https://github.com/appium/appium-desktop) pour savoir comment utiliser l'Appium Desktop.
 
-### appium-inspector
-Un inspecteur d'interface graphique pour les applications mobiles et autres, alimenté par un serveur Appium (installé séparément). Lorsque vous l'utilisez pour inspecter une application mobile. On verra son utilisation plus tard mais ce qu'il faut retenir avant de l'utiliser c'est:
-- Il faut démarrer le serveur appium soit en ligne de commande soit en passant par appium-desktop
-- Il faut démarrer un device (réel ou emulé)
-- Il faut une configuration minimum comme ceci:
+> :warning: **Appium Desktop n'est plus maintenu** et présente des failles de sécurité connues. Il est conseillé de ne pas l'utiliser du tout. Utilisez-le en local si vous voulez mais c'est à vos risques et périls. La méthode recommander est de lancer appium en ligne de commande:
 
-```json
-{
-  "platformName": "Android",
-  "appium:automationName": "UiAutomator2"
-}
+```bash
+➜  appium --base-path=/wd/hub
+[Appium] Welcome to Appium v2.1.3
+[Appium] Non-default server args:
+[Appium] {
+[Appium]   basePath: '/wd/hub'
+[Appium] }
+[Appium] Attempting to load driver uiautomator2...
 ```
 
+- Il ne faut pas oublier le paramètre de lancement **base-path=/wd/hub** car la configuration a changé depuis la [migration Appium 2.X](https://appium.io/docs/en/2.1/guides/migrating-1-to-2/)
 
+### Install appium-inspector
+- [Appium Inspector](https://github.com/appium/appium-inspector/releases) est un outil d'interface graphique qui permet d'inspecter les éléments des applications mobiles. Il faut installer la dernière version stable sur votre machine.
+
+Il fonctionne avec un serveur Appium. Lorsque vous l'utilisez pour inspecter une application mobile :
+- Il faut démarrer le serveur appium soit en **ligne de commande** ci-dessus, soit en passant par **appium-desktop**
+- Il faut démarrer un device Android ou iOS (réel ou emulé)
+- Il faut une ![configuration minimum](./assets/appiumInspector.png) pour pouvoir se connecter et inspécter le device
