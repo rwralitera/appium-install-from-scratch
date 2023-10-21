@@ -61,3 +61,64 @@ npx wdio run ./wdio.ios.conf.ts
 ## Foire aux questions (FAQ)
 
 Consultez le fichier [FAQ.md](./Docs/FAQ.md) pour obtenir des solutions aux erreurs courantes que vous pourriez rencontrer lors de l'installation. Si vous rencontrez d'autres problèmes, n'hésitez pas à nous les signaler, nous mettrons à jour ce document en conséquence.
+
+## Next steps
+
+
+
+## Aller plus loin dans l'apprentissage
+
+Pour aller plus loin, voici une petite liste des choses à apprendre:
+ - [ ] Configurer proprement un linter
+ - [ ] Gérer plus efficacement les fichiers de configurations
+	 - [ ] Gestion Saucelabs
+	 - [ ] Gestion BrowserStack
+	 - [ ] Gestion des tests par device
+	 - [ ] Gestion des tests par Browser
+ - [ ] Gérer les scripts de lancement des tests
+	 - [ ] Par types de tests
+	 - [ ] Par device
+ - [ ] Configurer les rapports de tests
+	 - [ ] slack
+	 - [ ] html
+ - [ ] Apprendre les capabilities d'Appium
+ - [ ] Apprendre comment chercher les éléments efficacement
+	 - [ ] id
+	 - [ ] accessibility id
+	 - [ ] xpath
+ - [ ] Apprendre les interactions avec les éléments efficacement
+	 - [ ] effacer un champ
+	 - [ ] remplir un champ
+	 - [ ] clicker sur un element
+ - [ ] Apprendre à faire les vérifications
+	 - [ ] chai
+ - [ ] Apprendre à gérer les sessions
+	 - [ ] gérer l'orientation du device
+	 - [ ] retour arrière
+	 - [ ] faire des captures d'écran
+ - [ ] Apprendre à gérer les timeouts
+	 - [ ] implicit
+	 - [ ] explicit
+ - [ ] Apprendre à gérer les attributs
+	 - [ ] récupérer un texte
+	 - [ ] récupérer un attribut
+ - [ ] Apprendre à gérer les états
+	 - [ ] selected
+	 - [ ] enabled
+	 - [ ] displayed
+ - [ ] Apprendre à écrire des tests efficaces
+	 - [ ] page objects
+	 - [ ] hooks
+	 - [ ] data fixtures
+ - [ ] Apprendre les actions avancés
+	 - [ ] scroll up
+	 - [ ] scroll down
+	 - [ ] scroll right
+	 - [ ] scroll left
+	 - [ ] carroussel
+	 - [ ] alerts
+	 - [ ] Picker
+ - [ ] Apprendre à gérer les contextes
+	 - [ ] Webview
+	 - [ ] Native
+ - [ ] Apprendre à intégrer les tests dans la CI
